@@ -12,15 +12,27 @@ Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0g
 Content-Disposition: form-data; name="file"; filename="example.mp3"
 Content-Type: audio/mpeg
 
-< ./example2.mp3
+< ./example.mp3
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 
 ###
 
 # @name create-transcription
-POST http://localhost:3333/videos/5804369e-62e3-41ea-8240-f0312ccf3104/transcription
+POST http://localhost:3333/videos/116acbc6-e666-4e9b-9e83-fc95cc2aa9af/transcription
 Content-Type: application/json
 
 {
-    "prompt": "Mac mini 2014"
+    "prompt": "Cache com Redis, Nodejs"
+}
+
+###
+
+# @name generate-completion
+POST http://localhost:3333/ai/complete
+Content-Type: application/json
+
+{
+    "videoId": "116acbc6-e666-4e9b-9e83-fc95cc2aa9af",
+    "temperature": 0.5,
+    "template": "Crie um resumo sucinto da transcrição do vídeo informado a seguir:'''{transcription}'''"
 }
