@@ -13,7 +13,7 @@ O projeto NLW IA Mastery Upload.ai é uma aplicação web desenvolvida durante o
 - [Fastify](https://fastify.io/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [OpenAI](https://openai.com/)
-- [Sqlite](https://openai.com/)
+
 
 
 ## Funcionalidades da Aplicação ##
